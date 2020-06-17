@@ -85,6 +85,10 @@ def show_names():
                except KeyError as e:
                    print("У документа ", a["number"], " не назначенно имя владельца")
 
-calc_1()
-calc_2()
-show_names()
+
+def main():
+    calc_1()
+    calc_2()
+    show_names()
+
+main()
