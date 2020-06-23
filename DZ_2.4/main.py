@@ -1,21 +1,18 @@
 def write_file(file):
-    book = {}
+    book = dict()
     try:
         with open(file, "r") as files:
             for line in files:
                 line = line.strip()
                 if not line:
                     continue
-                elif  line.isdigit():
+                elif line.isdigit():
                     amount_of_ingredients = line
-                elif  "|" not in line:
+                elif "|" not in line:
                     dish_name = line
                     book[dish_name] = []
                 else:
-                    f = line.split("|")
-                    name_ingredients = f[0]
-                    amount = f[1]
-                    measure = f[2]
+                    name_ingredients, amount, measure = line.split("|")
                     book[dish_name].append(
                         {"ingredient_name": name_ingredients, "quantity": amount, "measure": measure})
     except Exception as e:
