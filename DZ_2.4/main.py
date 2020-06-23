@@ -6,11 +6,11 @@ def write_file(file):
                 line = line.strip()
                 if not line:
                     continue
-                elif line.isdigit() is not True and "|" not in line:
+                elif  line.isdigit():
+                    amount_of_ingredients = line
+                elif  "|" not in line:
                     dish_name = line
                     book[dish_name] = []
-                elif "|" not in line and line.isdigit():
-                    amount_of_ingredients = line
                 else:
                     f = line.split("|")
                     name_ingredients = f[0]
