@@ -17,11 +17,11 @@ def write_file(file):
 
     return book
 
+    # def __repr__
 
-# def __repr__
+
 cook_book = write_file("recipes.txt")
 print(cook_book)
-
 
 
 # Задача №2
@@ -45,11 +45,12 @@ print(cook_book)
 # Обратите внимание, что ингредиенты могут повторяться
 
 def get_shop_list_by_dishes(dishes, person_count):
-    shopping_list ={}
+    shopping_list = {}
     for n_dishes in dishes:
         for ingredients in cook_book[n_dishes]:
-            if  ingredients["ingredient_name"] not in shopping_list:
-                shopping_list[ingredients["ingredient_name"]] = {"measure":ingredients["measure"] , "quantity": int(ingredients["quantity"]) *person_count}
+            if ingredients["ingredient_name"] not in shopping_list:
+                shopping_list[ingredients["ingredient_name"]] = {"measure": ingredients["measure"], "quantity": int(
+                    ingredients["quantity"]) * person_count}
             else:
                 shopping_list[ingredients["ingredient_name"]]["quantity"] += int(ingredients("quantity")) * person_count
     print(shopping_list)
