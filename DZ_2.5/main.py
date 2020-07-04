@@ -5,8 +5,8 @@ from datetime import datetime
 
 
 class SearchTime:
-    def __init__(self, index, encoding='utf-8'):
-        self.file = open(index, 'w', encoding=encoding)
+    def __init__(self, index):
+        self.file = open(index, 'w')
 
     def __enter__(self):
         self.start_time = time.time()
