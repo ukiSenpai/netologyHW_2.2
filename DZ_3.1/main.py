@@ -6,7 +6,7 @@ import json
 from collections import Counter
 import xml.etree.ElementTree as ET
 
-def parseDate(date) -> dict():
+def parseDate(date) :
 
     counter = Counter()
     for item in date:
